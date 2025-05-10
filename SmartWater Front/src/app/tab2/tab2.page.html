@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      VALVULAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>VALVULA TANQUE</ion-card-title>
+      <ion-card-subtitle>
+        <div class="icon"   *ngIf="exibir2">    <img src="\assets\valvf.svg"></div>
+        <div class="icon" *ngIf="exibir1">    <img src="\assets\valva.svg"></div>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button class="btn_ligar" (click)="ligada1()">ABRIR</ion-button>
+      <ion-button class="btn_desligar" (click)="desligada1()">FECHAR</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>VALVULA SAIDA</ion-card-title>
+      <ion-card-subtitle>
+        <div class="icon"   *ngIf="exibir4">    <img src="\assets\valvf.svg"></div>
+        <div class="icon" *ngIf="exibir3">    <img src="\assets\valva.svg"></div>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button class="btn_ligar" (click)="ligada2()">ABRIR</ion-button>
+      <ion-button class="btn_desligar" (click)="desligada2()">FECHAR</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>VALVULA MORRO</ion-card-title>
+      <ion-card-subtitle>
+        <div class="icon"><img src="\assets\valv.svg"></div>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button class="btn_ligar" [disabled]="true">LIGAR</ion-button>
+      <ion-button class="btn_desligar" [disabled]="true">DESLIGAR</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

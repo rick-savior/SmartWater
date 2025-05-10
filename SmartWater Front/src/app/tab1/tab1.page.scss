@@ -1,0 +1,30 @@
+ion-title {
+    --color: #ffffff;
+    --background: #000
+  } 
+
+  ion-toolbar {
+    --background: #0e058d;
+  }
+
+.icon {
+  font-size: 50px;
+  height: 80px;
+  width: 80px;
+}
+
+ion-card {
+    --background: #ffffff;
+    border-color: gray;
+    border-style: solid;
+    border-width: 1px
+  }
+
+.btn_ligar  {
+    color:red;
+    --background: rgba(128, 128, 128, 0.4);
+  }
+  .btn_desligar  {
+    color:green;
+    --background: rgba(128, 128, 128, 0.4);
+  }
