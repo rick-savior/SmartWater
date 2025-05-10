@@ -1,0 +1,303 @@
+[
+    {
+        "id": "8e9b70da69d176cc",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1b1333ef787afddb",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": true,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "hidden",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "585cb3283e5cb21c",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#000ecc",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "compact",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "eec9f55bec5353de",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "1b1333ef787afddb",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "585cb3283e5cb21c",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "652a3116e94c99eb",
+        "type": "ui-group",
+        "name": "Sistema de abastecimento São Pedro",
+        "page": "eec9f55bec5353de",
+        "width": "5",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "9c96389736f4150b",
+        "type": "remote-config",
+        "name": "Desk",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "dashboard",
+        "instancehash": "bp49rmk2o8y3i5xg9ac5je4fwsrvtmj8mc5y9ebivqsjuyp1z7alrf1ghqi11zhd",
+        "server": "nodered02.remote-red.com",
+        "region": "de"
+    },
+    {
+        "id": "f46ec6066061c7f1",
+        "type": "ui-button",
+        "z": "8e9b70da69d176cc",
+        "group": "652a3116e94c99eb",
+        "name": "",
+        "label": "LIGAR",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "LIGADO",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#FF0000",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "eede478c76f44bcb",
+                "16ede1240fbee006"
+            ]
+        ]
+    },
+    {
+        "id": "4c45161b2d608337",
+        "type": "ui-button",
+        "z": "8e9b70da69d176cc",
+        "group": "652a3116e94c99eb",
+        "name": "",
+        "label": "DESLIGAR",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "DESLIGADO",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#008000",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "eede478c76f44bcb",
+                "0cd08ecb113c908e"
+            ]
+        ]
+    },
+    {
+        "id": "13b24f891ff6f86f",
+        "type": "debug",
+        "z": "8e9b70da69d176cc",
+        "name": "msg payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "10d7d5eeed9f0ae8",
+        "type": "ui-text",
+        "z": "8e9b70da69d176cc",
+        "group": "652a3116e94c99eb",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "name": "Bomba 1",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ff00a2",
+        "wrapText": false,
+        "className": "",
+        "x": 900,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "eede478c76f44bcb",
+        "type": "switch",
+        "z": "8e9b70da69d176cc",
+        "name": "Troca de bombas",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "LIGADO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "DESLIGADO",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "10d7d5eeed9f0ae8",
+                "13b24f891ff6f86f"
+            ],
+            [
+                "10d7d5eeed9f0ae8",
+                "13b24f891ff6f86f"
+            ]
+        ]
+    },
+    {
+        "id": "0cd08ecb113c908e",
+        "type": "template",
+        "z": "8e9b70da69d176cc",
+        "name": "COR VERDE",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "plain",
+        "template": "<h2 style=\"color:black;\">BOMBA 1</h2>\n<h1 style=\"color:green;\">DESLIGADO</h1>",
+        "output": "str",
+        "x": 650,
+        "y": 420,
+        "wires": [
+            [
+                "10d7d5eeed9f0ae8"
+            ]
+        ]
+    },
+    {
+        "id": "16ede1240fbee006",
+        "type": "template",
+        "z": "8e9b70da69d176cc",
+        "name": "COR VERMELHA",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "plain",
+        "template": "\n<h2 style=\"color:black;\">BOMBA 1</h2>\n<h1 style=\"color:red;\">LIGADO</h1>\n",
+        "output": "str",
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "10d7d5eeed9f0ae8"
+            ]
+        ]
+    }
+]
